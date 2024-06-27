@@ -1,0 +1,1 @@
+=> "Ruby é uma linguagem diferente"
