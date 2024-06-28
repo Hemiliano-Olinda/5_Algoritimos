@@ -24,9 +24,9 @@ programa{
             g[i] = g[i-1]*2 
         
         }
-        escreva("No Quadrado: ", n, "Possui ", g[n-1], "grãos.")
+        escreva("No Quadrado: ", n, "Possui ", g[n-1], "grãos.\n")
         para ( inteiro i=0; i < 64 ; i++){
-            escreva ("A casa: ", i ,"possui: ", g[i])   
+            escreva ("A casa: ", i+1 ,"possui: ", g[i],"\n")   
         
         }
     }
