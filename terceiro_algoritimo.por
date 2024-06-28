@@ -5,7 +5,7 @@
 programa{
         funcao inicio(){
         inteiro lin
-        escreva ("Escrava um Numero: ")
+        escreva ("Digite o numero de linhas do Triângulo de Pascal: ")
         leia(lin)    
         inteiro Mat[lin][lin]
         para ( inteiro i = 0  ; i < lin ; i++){
@@ -15,19 +15,11 @@ programa{
                         Mat[i][f] = 0
                         Mat[0][0] = 1
                     } senao{
-                        Mat[i][f] = Mat[i-1][f]+Mat[i-1][f-1]
-                        
-                    }
-                    
+                        Mat[i][f] = Mat[i-1][f]+Mat[i-1][f-1]    
+                    } 
                     escreva(Mat[i][f]) 
-                    
-                    
+                                      
                 }
-            
             }   
-     
-        
         }
-
-
     }
