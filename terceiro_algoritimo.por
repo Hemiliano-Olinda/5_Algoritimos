@@ -11,8 +11,17 @@ programa{
         para ( inteiro i = 0  ; i < lin ; i++){
             escreva("\n")
                 para ( inteiro f = 0  ; f < lin ; f++){
-                    Mat[i][f] = 0
-                    escreva ( Mat[i][f] )
+                    se (i==0){
+                        Mat[i][f] = 0
+                        Mat[0][0] = 1
+                    } senao{
+                        Mat[i][f] = Mat[i-1][f]+Mat[i-1][f-1]
+                        
+                    }
+                    
+                    escreva(Mat[i][f]) 
+                    
+                    
                 }
             
             }   
