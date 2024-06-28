@@ -1,44 +1,36 @@
-//Instruções
-//Escreva uma função que retorna os pontos ganhos em um único lançamento de um jogo de dardos.
-//
-//Dardos é um jogo em que os jogadores atiram dardos em um alvo .
-//
-//No nosso exemplo específico do jogo, o alvo é recompensado com 4 quantidades diferentes de pontos, 
-//dependendo de onde o dardo cair:
-//
-//Se o dardo cair fora do alvo, o jogador não ganha pontos (0 pontos).
-//Se o dardo cair no círculo externo do alvo, o jogador ganha 1 ponto.
-//Se o dardo cair no círculo central do alvo, o jogador ganha 5 pontos.
-//Se o dardo cair no círculo interno do alvo, o jogador ganha 10 pontos.
-//O círculo externo tem um raio de 10 unidades (isso é equivalente ao raio total de todo o alvo),
-//o círculo do meio tem um raio de 5 unidades e o círculo interno tem um raio de 1. Claro, 
-//eles estão todos centralizados no mesmo ponto (ou seja, os círculos são concêntricos ) 
-//definido pelas coordenadas (0, 0).
-//
-//Escreva uma função que, dado um ponto no alvo (definido por suas realcoordenadas cartesianas x e y), 
-//retorne o valor correto ganho por um dardo caindo naquele ponto.
-//
-//Fonte
-//Inspirado em um exercício criado pela professora Della Paolera na Argentina
-//
+//Introdução
+//Um ano bissexto (no calendário gregoriano) ocorre:
+
+//Em cada ano, isso é divisível por 4.
+//A menos que o ano seja divisível por 100, caso em que só será um ano bissexto se o ano também for divisível por 400.
+//Alguns exemplos:
+
+//1997 não foi um ano bissexto porque não é divisível por 4.
+//1900 não foi um ano bissexto, pois não é divisível por 400.
+//2000 foi um ano bissexto!
 programa{
-        funcao inicio() {
+  
+        inteiro ano, resto
         
-        inteiro N1
-        inteiro N2
-        inteiro pontos
-        //nome = "ola"
-            escreva("Digite um numero de 0 a 9: ")
-            leia(N1)
-            escreva("Digite um numero de 0 a 9: ")
-            leia(N2)
-            se (N1+N2 > 16) {
-              pontos = N1+N2
-              }
-                senao se (N1+N2 > 10) {
-                    pontos = N1+N2
-                } 
-             
-            escreva(pontos)
+        funcao inicio() {
+        escreva ("Digite um ano com 4 numeros exemplo 2024 para verificarmos se o ano é bissexto: ")
+        leia(ano)
+        resto = ano % 4
+            se ( resto == 0 ){
+            //escreva ( "ano divisivel por 4.")
+                se ( ano % 100 == 0 ) {
+                    //escreva ( "ano divisivel por 100.")
+                    se ( ano % 400 == 0 ) {
+                        //escreva ( "ano divisivel por 400.")
+                        escreva ("O ano de", ano ,"é Bissexto")
+                    }   
+                    
+                }
+             }
+             senao {
+                    escreva ("O ano de", ano ,"não é um ano bissexto")
+                }
+        
+        escreva (resto)
         }
 }
